@@ -169,7 +169,8 @@ body {
 
 .skills__text {
     color: var(--secondary-text-color);
-    text-align: justify;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(160px, 1fr));
 }
 
 /* Experience and additional info styles */
