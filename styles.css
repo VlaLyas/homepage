@@ -18,6 +18,8 @@ body {
     --text-decoration-color: darkgray;
 }
 
+progress { accent-color: black; }
+
 .container {
     margin: 0 auto;
     padding: 0 30px;
@@ -175,6 +177,17 @@ body {
 
 /* Experience and additional info styles */
 
+.main-info {
+    padding-left: 5%;
+    border-left: solid;
+    border-image: linear-gradient(to bottom, black, #eee) 1 100%;
+}
+
+.two__columns__block {
+    display: grid;
+    grid: auto-flow dense / 1.2fr 1fr;
+}
+
 .experiences {
     flex: 1 1 60%;
     margin-right: 50px;
@@ -263,6 +276,12 @@ body {
     color: var(--secondary-text-color);
     text-align: left;
     margin-bottom: 20px;
+}
+
+.additional-info__languages-body {
+    display: grid;
+    grid: auto-flow / 1fr 1fr 1fr;
+    gap: 5px;
 }
 
 .additional-info__languages-item {
