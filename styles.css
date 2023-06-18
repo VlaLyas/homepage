@@ -14,9 +14,11 @@ body {
     --secondary-text-color: #5c5c62;
     --durability-text-color: #6a737d9c;
     --icon-color: #6a737d;
-    --border-color: #ff9a0045;
-    --text-decoration-color: #ff9a00;
+    --border-color: #0f0f0e45;
+    --text-decoration-color: darkgray;
 }
+
+progress { accent-color: black; }
 
 .container {
     margin: 0 auto;
@@ -81,7 +83,7 @@ body {
     color: var(--primary-text-color);
     margin-bottom: 15px;
     text-decoration-color: var(--text-decoration-color);
-    text-decoration-line: underline;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .contact-info__sub-header {
@@ -91,19 +93,15 @@ body {
 
 .contact-info__block {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.contact-info__block--center {
-    justify-content: center;
+    flex-flow: row wrap;
 }
 
 .contact-info__item {
     color: var(--secondary-text-color);
     text-decoration: none;
     display: flex;
-    justify-content: start;
+    justify-content: stretch;
+    width: calc(100%/3);
 }
 
 .contact-info__item:not(:last-child) {
@@ -127,12 +125,14 @@ body {
 }
 
 .contact-info__avatar {
-    border-radius: 50%;
+    border-radius: 10%;
     width: 100px;
     height: 100px;
     object-fit: cover;
     border: 3px solid;
     border-color: var(--text-decoration-color);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Intro and skills styles */
@@ -171,10 +171,22 @@ body {
 
 .skills__text {
     color: var(--secondary-text-color);
-    text-align: justify;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(160px, 1fr));
 }
 
 /* Experience and additional info styles */
+
+.main-info {
+    padding-left: 5%;
+    border-left: solid;
+    border-image: linear-gradient(to bottom, black, #eee) 1 100%;
+}
+
+.two__columns__block {
+    display: grid;
+    grid: auto-flow dense / 1.2fr 1fr;
+}
 
 .experiences {
     flex: 1 1 60%;
@@ -264,6 +276,12 @@ body {
     color: var(--secondary-text-color);
     text-align: left;
     margin-bottom: 20px;
+}
+
+.additional-info__languages-body {
+    display: grid;
+    grid: auto-flow / 1fr 1fr 1fr;
+    gap: 5px;
 }
 
 .additional-info__languages-item {
